@@ -16,7 +16,7 @@ const search = async (query) => {
     const blogData = response.data.blogs;
 
     const results = blogData.filter((blog) =>
-      blog.title.toLowerCase().includes(query)
+      blog.title.toLowerCase().includes(query.toLowerCase())
     );
 
     return results;
